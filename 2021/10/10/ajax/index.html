@@ -1,0 +1,1151 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ajax笔记, yutoja">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>ajax笔记 | yutoja</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">yutoja</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">yutoja</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">ajax笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/ajax/">
+                                <span class="chip bg-color">ajax</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-10-10
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>实例化对象</p>
+<p>var xhr = new XmlHttpRequest();</p>
+<p>xhr.open(“GET”,”<a target="_blank" rel="noopener" href="http://127.0.0.1&quot;,true/">http://127.0.0.1&quot;,true</a>);</p>
+<p>第一个参数是 HTTP 请求方法——GET、POST、HEAD 或服务器支持的其他方法。根据 HTTP 标准保持方法全部大写，否则某些浏览器（如 Firefox）可能无法处理请求。</p>
+<p>第二个参数是您将请求发送到的 URL。作为一项安全功能，默认情况下您无法调用 3rd 方域上的 URL。</p>
+<p>可选的第三个参数设置请求是否异步。如果 true（默认），JavaScript 将继续执行，用户可以在服务器响应尚未到达时与页面交互。这是 AJAX 中的第一个 A。</p>
+<p>使用 xhr 对象发起带参数的 GET 请求时，只需在调用 xhr.open 期间，为 URL 地址指定参数即可:<br>xhr.open ( ‘GET’, ‘http: //<a target="_blank" rel="noopener" href="http://www.liulongbin.top:3006/api/getbooks?id-1&#39;">www.liulongbin.top:3006/api/getbooks?id-1&#39;</a>)</p>
+<p>这种在 URL 地址后面拼接的参数,叫做查询字符串。</p>
+<p>GET 请求携带参数的本质</p>
+<p>无论使用$.ajax()，还是使用$.get)，又或者直接使用 xhr 对象发起 GET 请求，当需要携带参数的时候，本质上，都是直接将参数以查询字符串的形式，追加到 URL 地址的后面，发送到服务器的。</p>
+<p>查询字符串</p>
+<p>定义:查询字符串(URL 参数)是指在 URL 的末尾加上用于向服务器发送信息的字符串(变量)。</p>
+<p>格式:将英文的?放在 URL 的末尾，然后再加上参数=值，想加上多个参数的话，使用&amp;符号进行分隔。以这个形式，可以将想要发送给服务器的数据添加到 URL 中。</p>
+<p>URL 编码</p>
+<p>URL 地址中，只允许出现英文相关的字母、标点符号、数字，因此，在 URL 地址中不允许出现中文字符。如果 URL 中需要包含中文这样的字符，则必须对中文字符进行编码(转义)。</p>
+<p>URL 编码的原则:使用安全的字符(没有特殊用途或者特殊意义的可打印字符）去表示那些不安全的字符。</p>
+<p>URL 编码原则的通俗理解:使用英文字符去表示非英文字符。</p>
+<p>如何对 URL 进行编码与解码</p>
+<p>浏览器提供了 URL 编码与解码的 API，分别是:</p>
+<p>encodeURI() 编码的函数</p>
+<p>decodeURI() 解码的函数</p>
+<p>xhr. setRequestHeader(“Content-type” , “application/x-www-form-urlencoded’); //如果是 post 别忘了设置请求头 固定格式<br>xhr.spen()</p>
+<p>send()方法的参数可以是您想要发送到服务器的任何数据，如果 POST-ing 请求。表单数据应该以服务器可以解析的格式发送</p>
+<p>xhr.onreadystatechange =function(){</p>
+<p>//该函数需要检查请求的状态。如果状态值为 XMLHttpRequest.DONE（对应于 4），则表示已收到完整的服务器响应，您可以继续处理它。</p>
+<p>if (xhr.readyState === XMLHttpRequest.DONE) {</p>
+<p>readyState 值的完整列表记录在 XMLHTTPRequest.readyState 中，如下所示：</p>
+<p>价值 状态 描述<br>0 UNSENT 客户端已创建。open()还没有叫。<br>1 OPENED open() 已被调用。<br>2 HEADERS_RECEIVED send() 已被调用，并且标题和状态可用。<br>3 LOADING 下载；responseText 保存部分数据。<br>4 DONE 操作完成。</p>
+<p>UNSENT<br>XMLHttpRequest 客户端已创建，但尚未调用 open() 方法。<br>OPENED<br> open() 方法已被调用。在此状态期间，可以使用 setRequestHeader()方法设置请求标头，并且可以调用将启动获取的 send()方法。<br>HEADERS_RECEIVED<br>已调用 send() 并已收到响应标头。<br>LOADING<br> 正在接收响应的正文。如果 responseType 是“文本”或空字符串，responseText 则在加载时将具有部分文本响应。<br>DONE<br>提取操作完成。这可能意味着数据传输已成功完成或失败</p>
+<p>xhr.status 状态码</p>
+<p>xhr.statusText 状态字符串</p>
+<p>xhr.response 响应体</p>
+<p>xhr.responseText 以文本字符串形式返回服务器响应</p>
+<p>xhr.responseXML 将响应作为 XMLDocument 您可以使用 JavaScript DOM 函数遍历的对象返回</p>
+<p>} else {</p>
+<p>}}</p>
+<p>设置 http 请求事件</p>
+<p>xhr.timeout=3000; 设置 3 秒后自动停止请求</p>
+<p>xhr.ontimeout() 停止请求后触发事件</p>
+<p>xhr.onerror() 网络异常时触发事件</p>
+<p>xhr.abort()取消访问|请求 方法</p>
+<p>Ajax 操作往往用来提交表单数据。为了方便表单处理，HTML5 新增了一个 FormData 对象,</p>
+<p>可以模拟表单操作:</p>
+<p>新建 FormData 对象</p>
+<p>var fd = new ForrData ()</p>
+<p>为 FormData 添加表单项</p>
+<p>fd.append ( ‘ uname ‘ , ‘zs’)</p>
+<p>fd.append ( ‘ upwd ‘, ‘123456’)</p>
+<p>创建 XHR 对象</p>
+<p>var xhr = new XMLHttpRequest ()</p>
+<p>指定请求类型与 URL 地址</p>
+<p>xhr.open (‘POST ‘，’http: / / <a target="_blank" rel="noopener" href="http://www.liulongbin.top/">www.liulongbin.top</a>: 3006/api/formdata ‘ )</p>
+<p>直接提交 FormData 对象，这与提交网页表单的效果，完全一样</p>
+<p>xhr. send (fd)</p>
+<p>FormData 对象也可以用来获取网页表单的值，示例代码如下:</p>
+<p>//获取表单元素<br>var form = document.querySelector ( ‘#form1’ )</p>
+<p>//监听表单元素的 submit 事件</p>
+<p>form. addEventListener ( ‘ submit ‘, function({</p>
+<p>e.preventDefault()</p>
+<p>//根据 form 表单创建 FormData 对象，会自动将表单数据填充到 FormData 对象中</p>
+<p>var fd = new FormData (form)</p>
+<p>var xhr = new XMLHttpRequest ()</p>
+<p>xhr.open ( ‘ POST’, ‘http: // <a target="_blank" rel="noopener" href="http://www.liulongbin.top:3006/api/formdata">www.liulongbin.top:3006/api/formdata</a> ‘)xhr.send (fd)</p>
+<p>xhr.onreadystatechange = function() { }</p>
+<p>})</p>
+<p>//创建 XHR 对象<br>var xhr = new XMLHttpRequest ()</p>
+<p>//监听 xhr.upload 的 onprogress 事件</p>
+<p>可以通过监听 xhr.upload.onprogress 事件，来获取到文件的上传进度。</p>
+<p>xhr.upload.onprogress = function(e) {</p>
+<p>e.lengthcomputable 是一个布尔值，表示当前上传的资源是否具有可计算的长度</p>
+<p>if (e.lengthcomputable){</p>
+<p>e.loaded 已传输的字节</p>
+<p>e.total 需传输的总字节</p>
+<p>var percentcomplete = Math.ceil ((e.loaded / e.total) * 100)<br>}</p>
+<p>监听上传完成事件</p>
+<p>xhr.upload.onload()</p>
+<p>XML</p>
+<p>英文全称是 EXtensible Markup Language，即可扩展标记语言。因此，XML 和 HTML 类似，也是一种标记语言。</p>
+<p>XML 和 HTML 的区别</p>
+<p>XML 和 HTML 虽然都是标记语言，但是，它们两者之间没有任何的关系。HTML 被设计用来描述网页上的内容，是网页内容的载体</p>
+<p>XML 被设计用来传输和存储数据，是数据的载体</p>
+<p>JSON</p>
+<p>概念:JSON 的英文全称是 JavaScript Object Notation，即”JavaScript 对象表示法”。</p>
+<p>简单来讲，</p>
+<p>JSON 就是 Javascript 对象和数组的字符串表示法，它使用文本表示一个 JS 对象或数组的信息，因此,JSON 的本质是字符串。</p>
+<p>作用:JSON 是一种轻量级的文本数据交换格式，在作用上类似于 XML，专门用于存储和传输数据，但是 JSON 比 XML 更小、更快、更易解析。</p>
+<p>现状:JSON 是在 2001 年开始被推广和使用的数据格式，到现今为止，JSON 已经成为了主流的数据交换格式。</p>
+<p>JSON 的两种结构</p>
+<p>对象结构:对象结构在 JSON 中表示为{}括起来的内容。数据结构为{ key.: value, key.: value, ….的键值对结构。其中，key 必须是使用英文的双引号包裹的字符串，value 的数据类型可以是数字、字符串、布尔值、null、数组、对象 6 种类型。</p>
+<p>数组结构:数组结构在 JSON 中表示为[]括起来的内容。数据结构为[ “java”, “javascript” , 30, true… ] .数组中数据的类型可以是数字、字符串、布尔值、null、数组、对象 6 种类型。</p>
+<p>JSON 语法注意事项</p>
+<p>属性名必须使用双引号包裹</p>
+<p>字符串类型的值必须使用双引号包裹 JSON 中不允许使用单引号表示字符串 JSON 中不能写注释</p>
+<p>JSON 的最外层必须是对象或数组格式</p>
+<p>不能使用 undefined 或函数作为 JSON 的值</p>
+<p>JSON 的作用:在计算机与网络之间存储和传输数据。</p>
+<p>JSON 的本质:用字符串来表示 Javascript 对象数据或数组数据</p>
+<p>要实现从 JSON 字符串转换为 S 对象，使用 JSON.parse() 方法</p>
+<p>要实现从 JSON 字符串转换为 S 对象，使用 JSON.stringify() 方法:</p>
+<p>序列化和反序列化</p>
+<p>把数据对象转换为字符串的过程，叫做序列化，例如:调用 JSON.stringify()函数的操作，叫做 JSON 序列化。</p>
+<p>把字符串转换为数据对象的过程，叫做反序列化，例如:调用 JSON.parse()函数的操作，叫做 JSON 反序列化。</p>
+<p>Axios</p>
+<p>axios 发起 get 请求的语法:</p>
+<p>axios.get ( ‘ur1’, { params: {/<em>参数</em>/} } ).then (callback)</p>
+<p>具体的请求示例如下:</p>
+<p>//请求的 URL 地址</p>
+<p>var url = ‘http: / / www . liulongbin.top: 3006/api/get’//请求的参数对象</p>
+<p>var paramsobj = { name: ‘zs’ , age: 20 }</p>
+<p>//调用 axios.get()发起 GET 请求</p>
+<p>axios.get(url,{ params: paramsobj } ).then (function ( res) {</p>
+<p>/ / res.data 是服务器返回的数据</p>
+<p>var result = res.data</p>
+<p>console.log (result)<br>})</p>
+<p>axios 发起 post 请求的语法:</p>
+<p>axios.post ( ‘ur1’, {/<em>参数</em>/ ]).then (callback)</p>
+<p>直接使用 axios 发起 GET 请求</p>
+<p>axios ( {</p>
+<p>method: ‘GET’,</p>
+<p>url: ‘http: / / wwnw . liulongbin.top: 3006/api/get ‘ ,params : {</p>
+<p>// GET 参数要通过 params 属性提供</p>
+<p>name : ‘zs’,</p>
+<p>age: 20</p>
+<p>}).then ( function ( res) {<br>console.log (res.data)<br>})</p>
+<p>直接使用 axios 发起 POST 请求<br>axrios({</p>
+<p>method: ‘POST”,</p>
+<p>url: ttp: //www .liulongbin.top : 3006/api/post ‘,data: {</p>
+<p>// PoST 数据要通过 data 属性提供</p>
+<p>bookname :‘程序员的自我修养”，</p>
+<p>price: 666</p>
+<p>} ).then (function ( res) {<br>console.log (res.data)<br>))</p>
+<p>同源</p>
+<p>如果两个页面的协议，域名和端口都相同，则两个页面具有相同的源。 端口号默认为 80</p>
+<p>同源策略</p>
+<p>同源策略(英文全称 Same origin policy)是浏览器提供的一个安全功能。</p>
+<p>MDN 官方给定的概念:同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。</p>
+<p>通俗的理解:浏览器规定，A 网站的 JavaScript，不允许和非同源的网站 C 之间，进行资源的交互，<br>例如:</p>
+<p>无法读取非同源网页的 Cookie、LocalStorage 和 IndexedDB</p>
+<p>无法接触非同源网页的 DOM</p>
+<p>无法向非同源地址发送 Aiax 请求</p>
+<p>跨域</p>
+<p>同源指的是两个 URL 的协议、域名、端口一致，反之，则是跨域</p>
+<p>出现跨域的根本原因:浏览器的同源策略不允许非同源的 URL 之间进行资源的交互。</p>
+<p>浏览器允许发起跨域请求，但是，跨域请求回来的数据，会被浏览器拦截，无法被页面获取到!</p>
+<p>JSONP</p>
+<p>JSONP (SON with Padding)是 JSON 的一种“使用模式”，可用于解决主流浏览器的跨域数据访问的问题。</p>
+<p>JSONP 的实现原理</p>
+<p>由于浏览器同源策略的限制，网页中无法通过 Ajax 请求非同源的接口数据。但是 script 标签不受浏览器同<br>源策略的影响，可以通过 src 属性,请求非同源的 js 脚本。<br>因此，JSONP 的实现原理，就是通过 script 标签的 src 属性，请求跨域的数据接口，并通过函数调用的形式，<br>接收跨域接口响应回来的数据。</p>
+<p>通信协议</p>
+<p>指通信的双方完成通信所必须遵守的规则和约定。</p>
+<p>通俗的理解:通信双方采用约定好的格式来发送和接收消息，这种事先约定好的通信格式，就叫做通信协议。</p>
+<p>互联网中的通信协议</p>
+<p>客户端与服务器之间要实现网页内容的传输，则通信的双方必须遵守网页内容的传输协议。</p>
+<p>网页内容又叫做超文本，因此网页内容的传输协议又叫做超文本传输协议(HyperText Transfer Protocol),简称 HTTP 协议。</p>
+<p>HTTP 协议</p>
+<p>HTTP 协议即超文本传送协议(HyperText Transfer Protocol)，它规定了客户端与服务器之间进行网页内容传输时，所必须遵守的传输格式。</p>
+<p>例如:</p>
+<p>客户端要以 HTTP 协议要求的格式把数据提交到服务器</p>
+<p>服务器要以 HTTP 协议要求的格式把内容响应给客户端</p>
+<p>HTTP 协议的交互模型</p>
+<p>HTTP 协议采用了请求/响应的交互模型。</p>
+<p>HTTP 请求消息</p>
+<p>由于 HTTP 协议属于客户端浏览器和服务器之间的通信协议。因此，客户端发起的请求叫做 HTTP 请求，客户端发送到服务器的消息，叫做 HTTP 请求消息。</p>
+<p>注意:HTTP 请求消息又叫做 HTTP 请求报文。</p>
+<p>HTTP 请求消息由请求行(request line)、请求头部 ( header )、空行和请求体 4 个部分组成。</p>
+<p>请求行由请求方式、URL 和 HTTP 协议版本 3 个部分组成，他们之间使用空格隔开。</p>
+<p>请求头部用来描述客户端的基本信息，从而把客户端相关的信息告知服务器。比如: User-Agent 用来说明当前是什么类型的浏览器;Content-Type 用来描述发送到服务器的数据格式;Accept 用来描述客户端能够接收什么类型的返回内容;Accept-Language 用来描述客户端期望接收哪种人类语言的文本内容。</p>
+<p>空行<br>最后一个请求头字段的后面是一个空行，通知服务器请求头部至此结束。请求消息中的空行，用来分隔请求头部与请求体。</p>
+<p>请求体<br>请求体中存放的，是要通过 POST 方式提交到服务器的数据。</p>
+<p>注意:只有 POST 请求才有请求体，GET 请求没有请求体!</p>
+<p>HTTP 响应消息</p>
+<p>响应消息就是服务器响应给客户端的消息内容，也叫作响应报文。</p>
+<p>HTTP 响应消息由状态行、响应头部、空行和响应体 4 个部分组成，如下图所示:</p>
+<p>状态行由 HTTP 协议版本、状态码和状态码的描述文本 3 个部分组成，他们之间使用空格隔开;</p>
+<p>响应头部用来描述服务器的基本信息。响应头部由多行键/值对组成，每行的键和值之间用英文的冒号分隔。</p>
+<p>在最后一个响应头部字段结束之后，会紧跟一个空行，用来通知客户端响应头部至此结束。响应消息中的空行，用来分隔响应头部与响应体。</p>
+<p>响应体中存放的，是服务器响应给客户端的资源内容。</p>
+<p>HTTP 响应状态码</p>
+<p>HTTP 响应状态码(HTTP Status Code)，也属于 HTTP 协议的一部分，用来标识响应的状态</p>
+<p>HTTP 响应状态码的组成及分类</p>
+<p>HTTP 状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型，后两个数字用来对状态码进行细分。</p>
+<p>1**<br>信息，服务器收到请求，需要请求者继续执行操作(实际开发中很少遇到 1**类型的状态码)<br>2**<br>成功，操作被成功接收并处理 常见的如下</p>
+<p>200 请求成功 ，一般用于 GET 与 POST 请求</p>
+<p>201 已创建。成功请求并创建了新的资源，通常用于 POST 或 PUT 请求</p>
+<p>3**<br>重定向，需要进一步的操作以完成请求</p>
+<p>301 Moved Permanently 永久移动。请求的资源已被永久的移动到新 URI，返回信息会包括新的 URI, 浏览器会自动定向到新 URI。今后任何新的请求都应使用新的 URI 代替<br>302 Found 临时移动。与 301 类似。但资源只是临时被移动。客户端应继续使用原有 URI<br>304 Not Modified 末修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源(响应消息中不包含响应体)。客户端通常会缓存访问过的资源。</p>
+<p>4**<br>客户端错误，请求包含语法错误或无法完成请求</p>
+<p>400 Bad Request 语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重复提交这个请求。2、请求参数有误。<br>401 Unauthorized 当前请求需要用户验证。<br>403 Forbidden 服务器已经理解请求,但是拒绝执行它。<br>404 Not Found 服务器无法根据客户端的请求找到资源(网页)。<br>408 Request Timeout 请求超时。服务器等待客户端发送的请求时间过长，超时。</p>
+<p>5**<br>服务器错误，服务器在处理请求的过程中发生了错误</p>
+<p>500 lnternal Server Error 服务器内部错误，无法完成请求。<br>501 Not lmplemented 服务器不支持该请求方法，无法完成请求。只有 GET 和 HEAD 请求方法是要求每个服务器必须支持的，其它请求方法在不支持的服务器上会返回 501<br>503 Service Unavailable 由于超载或系统维护，服务器暂时的无法处理客户端的请求。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">yutoja</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://yutoja.github.io/2021/10/10/ajax/">https://yutoja.github.io/2021/10/10/ajax/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">yutoja</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/ajax/">
+                                    <span class="chip bg-color">ajax</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/10/10/js%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="js笔记">
+                        
+                        <span class="card-title">js笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/10/git/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="git基本操作">
+                        
+                        <span class="card-title">git基本操作</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">yutoja</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "10";
+                        var startDate = "9";
+                        var startHour = "9";
+                        var startMinute = "54";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                    
+                    document.getElementById("busuanzi_container_site_uv").style.display = "none"
+
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/yutoja" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="#" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1976635832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1976635832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

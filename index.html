@@ -384,15 +384,15 @@
     var i = new Date().getDay()
     var bannerUrl = "/medias/banner/" + i + '.jpg';
          $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-    setInterval(function(){
-        i++
-        if(i==7){
-             i=0
-         }
-        bannerUrl = "/medias/banner/" + i + '.jpg';
-         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    // setInterval(function(){
+    //     i++
+    //     if(i==7){
+    //          i=0
+    //      }
+    //     bannerUrl = "/medias/banner/" + i + '.jpg';
+    //      $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
          
-    },5000)
+    // },5000)
     
 </script>
 
@@ -676,6 +676,60 @@ xhr.open(“GET”,”http://127.0.0.1
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/10/16/jq/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="jq 笔记">
+                            
+                            <span class="card-title">jq 笔记</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                $ 是 jQuery 的别称，在代码中可以使用 jQuery 代替 $ 但为了方便，通常都直接使用 $
+$ 是 jQuery 的顶级对象，相当于原生 JavaScript 中的 window，把元素利用 $ 包装成 jQuery，就可以调用
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                            <span class="chip bg-color">前端</span>
+                        </a>
+                        
+                        <a href="/tags/Jquery/">
+                            <span class="chip bg-color">Jquery</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
